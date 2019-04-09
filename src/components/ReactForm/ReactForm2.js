@@ -43,7 +43,7 @@ export default function ReactForm2() {
   return (
 
     <>
-      <h4>ReactForm2 Validate on Submit</h4>
+      <h4>ReactForm2 Validate onClick</h4>
 
       <form
         noValidate // This is important

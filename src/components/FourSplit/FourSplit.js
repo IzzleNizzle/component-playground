@@ -3,13 +3,14 @@ import React from 'react';
 let fourSplitStyles = {
   height: "100vh",
   display: "grid",
-  "grid-template-columns": "auto auto"
+  gridTemplateColumns: "auto auto"
 }
 
 let gridItem = {
+  maxWidth: "50vw",
   display: "flex",
-  "justify-content": "center",
-  "align-items": "center",
+  justifyContent: "center",
+  alignItems: "center",
   border: "blue 1px solid"
 }
 
