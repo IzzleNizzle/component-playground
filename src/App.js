@@ -1,14 +1,13 @@
-import React, { Component } from 'react'
+import React from 'react'
 import ReactForm from './components/ReactForm'
+import SingleFrame from './components/SingleFrame'
 
-class App extends Component {
-  render() {
-    return (
-      <div className="App container">
+export default function App() {
+  return (
+    <div className="App container">
+      <SingleFrame>
         <ReactForm />
-      </div>
-    );
-  }
+      </SingleFrame>
+    </div>
+  );
 }
-
-export default App
