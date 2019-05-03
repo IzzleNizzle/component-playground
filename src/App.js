@@ -1,12 +1,13 @@
 import React from 'react'
-import ReactForm from './components/ReactForm'
 import SingleFrame from './components/SingleFrame'
+// import ReactForm from './components/ReactForm'
+import ProgressBar from './components/ProgressBar'
 
 export default function App() {
   return (
     <div className="App container">
       <SingleFrame>
-        <ReactForm />
+        <ProgressBar />
       </SingleFrame>
     </div>
   );

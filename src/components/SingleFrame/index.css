@@ -12,4 +12,5 @@ body {
   height: 33vh;
   width: 33vw;
   background-color: white;
+  border-radius: 5px;
 }
