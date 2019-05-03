@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Input from '../Input'
 
 // Simple render like this;
-export default function ReactForm() {
+export default function ReactForm2() {
   const [formValid, setFormValid] = useState(false);
 
   const [userInput, setUserInput] = useState({
@@ -43,7 +43,7 @@ export default function ReactForm() {
   return (
 
     <>
-      <h4>ReactForm Validate on Submit</h4>
+      <h4>ReactForm2 Validate onClick</h4>
 
       <form
         noValidate // This is important
@@ -80,7 +80,7 @@ export default function ReactForm() {
           Submit
       </button>
       </form>
-    </>
 
+    </>
   );
 }
