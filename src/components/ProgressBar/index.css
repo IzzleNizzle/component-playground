@@ -1,0 +1,13 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/octicons/3.5.0/octicons.min.css");
+
+.container {
+  background-color: white;
+  border-radius: 5px;
+  padding: 15px;
+  text-align: center;
+  /* min-width: 45vw; */
+}
+
+input {
+  max-width: 55px;
+}
