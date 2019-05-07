@@ -42,18 +42,13 @@ export default function ProgressBar(props) {
         </div>
       </div>
       <div
-        style={{ marginLeft: '5px' }}
+        style={{
+          marginLeft: '5px',
+          cursor: "pointer"
+        }}
         onClick={props.toggle}
-        cursor="pointer"
       >
-        <a
-          href='#'
-          // overwriting default a styles
-          style={{
-            color: 'black',
-            textDecoration: 'none'
-          }}
-          className="octicon octicon-pencil"></a>
+        <div className="octicon octicon-pencil"></div>
       </div>
     </div>
   );
