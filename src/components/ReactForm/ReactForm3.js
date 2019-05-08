@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Input from '../Input'
 
 // Simple render like this;
-export default function ReactForm2() {
+export default function ReactForm3() {
   const [formValid, setFormValid] = useState(false);
 
   const [userInput, setUserInput] = useState({
@@ -43,7 +43,7 @@ export default function ReactForm2() {
   return (
 
     <>
-      <h4>ReactForm2 Validate onClick</h4>
+      <h4>ReactForm3, validate on each input.</h4>
       <p>This could be useful if you'd like to trigger validation or submition from somewhere other than the normal submit.</p>
       <form
         noValidate // This is important
