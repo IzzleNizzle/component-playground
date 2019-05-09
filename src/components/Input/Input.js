@@ -1,9 +1,6 @@
 import React from 'react';
 
 export default function Input(props) {
-  let check = e => {
-    console.log(e.target.checkValidity())
-  }
   return (
     <div className="col-md-6">
       <label>
@@ -16,8 +13,6 @@ export default function Input(props) {
         name={props.name}
         onChange={props.handleInputChange}
         required={props.required}
-        onBlur={() => check}
-        onFocus={() => console.log('focus')}
       />
       <div className="invalid-feedback">Hmmm, something's not right.</div>
     </div>
