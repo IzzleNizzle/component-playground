@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Input from '../Input'
+import useDebounce from '../../hooks/useDebounce'
 
 // Simple render like this;
 export default function ReactForm4() {
@@ -38,6 +39,55 @@ export default function ReactForm4() {
 
   // Update state to original validation state
   const clearValidation = () => setFormValid(false)
+
+
+
+  // State and setter for search results
+  const [results, setResults] = useState([]);
+  // State for search status (whether there is a pending API request)
+  const [isSearching, setIsSearching] = useState(false);
+
+  const debouncedSearchTerm = useDebounce(userInput.lastName, 500);
+
+  // Here's where the API call happens
+  // We use useEffect since this is an asynchronous action
+  useEffect(
+    () => {
+      // Make sure we have a value (user has entered something in input)
+      if (debouncedSearchTerm) {
+        // Set isSearching state
+        setIsSearching(true);
+
+      } else {
+        setResults([]);
+      }
+    },
+    // This is the useEffect input array
+    // Our useEffect function will only execute if this value changes ...
+    // ... and thanks to our hook it will only change if the original ...
+    // value (searchTerm) hasn't changed for more than 500ms.
+    [debouncedSearchTerm]
+  );
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
   let myStyles = {
     display: "flex",
