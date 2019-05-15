@@ -1,23 +1,24 @@
 import React from 'react'
-// import FourSplit from './components/FourSplit'
-import SingleFrame from './components/SingleFrame'
-// import ReactForm from './components/ReactForm'
+import FourSplit from './components/FourSplit'
+// import SingleFrame from './components/SingleFrame'
+import ReactForm, { ReactForm2 } from './components/ReactForm'
+// import ReactForm2 from './components/ReactForm'
 import ProgressBar from './components/ProgressBar'
 
 export default function App() {
   return (
 
     <div className="App container">
-      <SingleFrame>
+      {/* <SingleFrame>
         <ProgressBar />
-      </SingleFrame>
+      </SingleFrame> */}
 
-      {/* <FourSplit
-        elemOne={<ProgressBar />}
-        elemTwo={<ProgressBar />}
+      <FourSplit
+        elemOne={<ReactForm />}
+        elemTwo={<ReactForm2 />}
         elemThree={<ProgressBar />}
         elemFour={<ProgressBar />}
-      /> */}
+      />
 
     </div>
   );
