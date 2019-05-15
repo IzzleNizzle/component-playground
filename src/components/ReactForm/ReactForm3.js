@@ -50,7 +50,7 @@ export default function ReactForm3() {
       style={myStyles}
     >
       <h4>ReactForm3</h4>
-      <p>Validate on each input.</p>
+      <p>Validate using onBlur.</p>
       <form
         noValidate // This is important
         className={formValid ? "was-validated" : ""}
