@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import Input from '../Input'
+import Input from './Input'
 import { useDebounce } from 'use-debounce';
 
 // Simple render like this;
@@ -65,15 +65,15 @@ export default function ReactForm4() {
       <form
         noValidate // This is important
         className={formValid ? "was-validated" : ""}
-        // onSubmit={validateForm}
-        onBlur={(e) => {
-          console.log(`blur`)
-          console.log(e);
-          console.log(e.target);
-          console.log(e.target.name);
-          console.log(e.target.checkValidity())
-          validateForm(e)
-        }}
+      // onSubmit={validateForm}
+      // onBlur={(e) => {
+      //   console.log(`blur`)
+      //   console.log(e);
+      //   console.log(e.target);
+      //   console.log(e.target.name);
+      //   console.log(e.target.checkValidity())
+      //   validateForm(e)
+      // }}
       >
         <div
           className="form-group row"
@@ -83,7 +83,7 @@ export default function ReactForm4() {
           <Input
             title="Last Name"
             name="lastName"
-            type="text"
+            type="checkbox"
             value={userInput["lastName"]}
             handleInputChange={handleInputChange}
             required={true}
