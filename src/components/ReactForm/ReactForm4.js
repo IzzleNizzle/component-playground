@@ -83,10 +83,12 @@ export default function ReactForm4() {
           <Input
             title="Last Name"
             name="lastName"
-            type="checkbox"
+            type="text"
             value={userInput["lastName"]}
             handleInputChange={handleInputChange}
             required={true}
+            invalidMessage={`Something's wrong here`}
+            validMessage={`This looks good`}
           />
           <Input
             title="Email"
