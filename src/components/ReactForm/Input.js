@@ -9,6 +9,8 @@ export default function Input(props) {
   // Some state variables for conditionally rendering validation messages
   const [validity, setValidity] = useState(true)
   const [validated, setValidated] = useState(false)
+
+  const [hasBounced, setHasBounced] = useState(false)
   // Debounce user input
   const [debouncedFunction, cancel] = useDebouncedCallback(
     // to memoize debouncedFunction we use useCallback hook.
@@ -16,9 +18,10 @@ export default function Input(props) {
     useCallback((ev) => {
       // props.handleInputChange(ev, val)
       console.log(`interesting test ${ev.checkValidity()}`);
-
+      setHasBounced(true)
       setValidated(true)
       setValidity(ev.checkValidity())
+
     }, []),
     1300,
     // The maximum time func is allowed to be delayed before it's invoked:
@@ -28,8 +31,14 @@ export default function Input(props) {
 
   // Handle dismount
   useEffect(() => {
-    return cancel
-  })
+    return () => {
+
+      console.log(`this hook (${props.name}) has dismounted`);
+
+      cancel()
+    }
+  }, [])
+
 
   // useEffect(() => {
   //   if (isInitialMount.current) {
@@ -41,6 +50,27 @@ export default function Input(props) {
   //   }
   // }, [debouncedUserInput]);
 
+  const validateInput = ev => {
+    // If input is back to blank, revert to beginning state
+    if (props.value === '') {
+      console.log(
+
+        'value is blakn'
+      );
+
+      // setHasBounced(true)
+      // setValidated(true)
+      setValidity(ev.checkValidity())
+
+
+      setValidated(false)
+      setHasBounced(false)
+    } else {
+      setValidated(true)
+      setValidity(ev.checkValidity())
+    }
+  }
+
   return (
     <div className="col-md-6">
       <label htmlFor={props.name}>
@@ -49,19 +79,36 @@ export default function Input(props) {
       <input
         className="form-control"
         type={props.type}
-        // value={props.value}
+        value={props.value}
         name={props.name}
         onChange={e => {
-          // props.handleInputChange(e)
-          debouncedFunction(e.target)
+          // hasBounced ? validateInput(e.target) : debouncedFunction(e.target)
+
+          if (hasBounced) {
+            console.log('hasbounced');
+            console.log(props.value);
+
+            validateInput(e.target)
+          }
+          else {
+            console.log('else hasbounced');
+            debouncedFunction(e.target)
+          }
+          props.handleInputChange(e)
+          // console.log(e)
+          console.log(`interesting test ${e.target.checkValidity()}`);
         }}
         required={props.required}
-      // onBlur={(e) => {
-      //   setValidated(true)
-      //   console.log(e.target.checkValidity())
-      //   // console.log(e.target.name)
-      //   // setValidity(e.target.checkValidity())
-      // }}
+        onBlur={(ev) => {
+          // setValidated(true)
+          cancel()
+          // console.log(ev)
+          setValidated(true)
+          setValidity(ev.target.checkValidity())
+          // console.log(e.target.checkValidity())
+          // console.log(e.target.name)
+          // setValidity(e.target.checkValidity())
+        }}
       />
       <div
         // className="invalid-feedback"

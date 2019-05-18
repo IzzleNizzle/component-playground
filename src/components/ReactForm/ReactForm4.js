@@ -97,6 +97,8 @@ export default function ReactForm4() {
             value={userInput["email"]}
             handleInputChange={handleInputChange}
             required={true}
+            invalidMessage={`Something's wrong here`}
+            validMessage={`This looks good`}
           />
           <Input
             title="Phone Number"
