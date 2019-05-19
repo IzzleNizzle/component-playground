@@ -5,7 +5,7 @@ let nonValidatedStyles = {
   display: "none"
 }
 
-export default function Input(props) {
+export default function IzzleInput(props) {
   // Reference to Input Dom Elem, used for checking validation debounced and systematically
   const inputRef = useRef(null);
   // Some state variables for conditionally rendering validation messages

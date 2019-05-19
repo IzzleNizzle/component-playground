@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import Input from './Input'
+import Input from './IzzleInput'
 import { useDebounce } from 'use-debounce';
 
 // Simple render like this;
-export default function ReactForm4() {
+export default function IzzleForm() {
   const [formValid, setFormValid] = useState(false);
   const [userInput, setUserInput] = useState({
     lastName: '',

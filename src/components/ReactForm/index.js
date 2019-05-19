@@ -1,4 +1,4 @@
 export { default } from './ReactForm'
 export { default as ReactForm2 } from './ReactForm2'
 export { default as ReactForm3 } from './ReactForm3'
-export { default as ReactForm4 } from './ReactForm4'
+export { default as IzzleForm } from './IzzleForm'
