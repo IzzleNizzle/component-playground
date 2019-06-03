@@ -4,7 +4,21 @@ export default function DraggableBox() {
   const el = useRef()
   useDraggable(el)
 
-  return (<div ref={el} className="DraggableBox"></div>)
+  return (
+    <div
+      ref={el}
+      className="DraggableBox">
+      <form action="">
+        <input type="checkbox" name="text" id="">
+          One
+      </input>
+        <input type="checkbox" name="text2" id="">
+          Two
+      </input>
+      </form>
+
+      <p>Hello world</p>
+    </div>)
 }
 
 export function useDraggable(el) {
