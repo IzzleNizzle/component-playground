@@ -11,7 +11,10 @@ export default function NavBizzle(props) {
     </p>
       {/* <DraggableBox /> */}
 
-      <DragDropContainer targetKey="foo" >
+      <DragDropContainer
+        targetKey="foo"
+        onDrop={e => console.log(e)}
+      >
         <div>Drag Me!</div>
       </DragDropContainer>
 

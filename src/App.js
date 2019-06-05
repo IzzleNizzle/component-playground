@@ -5,7 +5,7 @@ import ReactForm, { ReactForm2 } from './components/ReactForm'
 // import ReactForm2 from './components/ReactForm'
 import ProgressBar from './components/ProgressBar'
 import NavBizzle from './components/NavBizzle'
-import DraggableBox from './components/DraggableBox'
+// import DraggableBox from './components/DraggableBox'
 
 
 
@@ -19,8 +19,8 @@ export default function App() {
       <p>hello world text</p>
 
       <SingleFrame>
-        {/* <NavBizzle /> */}
-        < DraggableBox />
+        <NavBizzle />
+        {/* < DraggableBox /> */}
       </SingleFrame>
 
 
