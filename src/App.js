@@ -1,6 +1,7 @@
 import React from 'react'
 // import FourSplit from './components/FourSplit'
 import SingleFrame from './components/SingleFrame'
+import Form from './pages/Forms'
 import ReactForm, { ReactForm2 } from './components/ReactForm'
 // import ReactForm2 from './components/ReactForm'
 import ProgressBar from './components/ProgressBar'
@@ -16,12 +17,13 @@ export default function App() {
       {/* <SingleFrame>
         <ProgressBar />
       </SingleFrame> */}
-      <p>hello world text</p>
+      {/* <p>hello world text</p> */}
 
-      <SingleFrame>
-        <NavBizzle />
-        {/* < DraggableBox /> */}
-      </SingleFrame>
+      <Form />
+      {/* <SingleFrame>
+        <NavBizzle /> */}
+      {/* < DraggableBox /> */}
+      {/* </SingleFrame> */}
 
 
       {/* <FourSplit
