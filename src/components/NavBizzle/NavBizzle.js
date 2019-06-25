@@ -1,26 +1,21 @@
 import React from 'react';
-import DraggableBox from '../DraggableBox'
-import { DragDropContainer, DropTarget } from 'react-drag-drop-container';
 import './index.css'
 
 export default function NavBizzle(props) {
   return (
-    <>
-      <p>
-        Demo using React Hooks - Implementing Draggable Box
-    </p>
-      {/* <DraggableBox /> */}
+    <nav>
+      <div className="nav-left-container">
 
-      <DragDropContainer
-        targetKey="foo"
-        onDrop={e => console.log(e)}
-      >
-        <div>Drag Me!</div>
-      </DragDropContainer>
+        <a href='#'>Testing</a>
 
-      <DropTarget targetKey="foo" >
-        <p>I'm a valid drop target for the object above since we both have the same targetKey!</p>
-      </DropTarget>
-    </>
+      </div>
+
+      <div className="nav-right-container">
+        <a href='#'>Testing</a>
+        <a href='#'>Testing</a>
+        <a href='#'>Testing</a>
+
+      </div>
+    </nav>
   );
 }

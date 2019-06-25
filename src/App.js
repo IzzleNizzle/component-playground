@@ -12,27 +12,29 @@ import NavBizzle from './components/NavBizzle'
 
 export default function App() {
   return (
-
-    <div className="App container">
-      {/* <SingleFrame>
+    <>
+      <NavBizzle />
+      <div className="App container">
+        {/* <SingleFrame>
         <ProgressBar />
       </SingleFrame> */}
-      {/* <p>hello world text</p> */}
+        {/* <p>hello world text</p> */}
 
-      <Form />
-      {/* <SingleFrame>
+        <Form />
+        {/* <SingleFrame>
         <NavBizzle /> */}
-      {/* < DraggableBox /> */}
-      {/* </SingleFrame> */}
+        {/* < DraggableBox /> */}
+        {/* </SingleFrame> */}
 
 
-      {/* <FourSplit
+        {/* <FourSplit
         elemOne={<ReactForm />}
         elemTwo={<ReactForm2 />}
         elemThree={<ProgressBar />}
         elemFour={<ProgressBar />}
       /> */}
 
-    </div>
+      </div>
+    </>
   );
 }
