@@ -1,8 +1,8 @@
 import React from 'react'
-// import FourSplit from './components/FourSplit'
+import FourSplit from './components/FourSplit'
 import SingleFrame from './components/SingleFrame'
 import Form from './pages/Forms'
-import ReactForm, { ReactForm2 } from './components/ReactForm'
+import ReactForm, { ReactForm2, ReactForm3 } from './components/ReactForm'
 // import ReactForm2 from './components/ReactForm'
 import ProgressBar from './components/ProgressBar'
 import NavBizzle from './components/NavBizzle'
@@ -13,14 +13,14 @@ import NavBizzle from './components/NavBizzle'
 export default function App() {
   return (
     <>
-      <NavBizzle />
+      {/* <NavBizzle /> */}
       <div className="App container">
-        {/* <SingleFrame>
-        <ProgressBar />
-      </SingleFrame> */}
+        <SingleFrame>
+          <ProgressBar />
+        </SingleFrame>
         {/* <p>hello world text</p> */}
 
-        <Form />
+        {/* <Form /> */}
         {/* <SingleFrame>
         <NavBizzle /> */}
         {/* < DraggableBox /> */}
@@ -28,11 +28,11 @@ export default function App() {
 
 
         {/* <FourSplit
-        elemOne={<ReactForm />}
-        elemTwo={<ReactForm2 />}
-        elemThree={<ProgressBar />}
-        elemFour={<ProgressBar />}
-      /> */}
+          elemOne={<ReactForm />}
+          elemTwo={<ReactForm2 />}
+          elemThree={<ReactForm3 />}
+          elemFour={<ProgressBar />}
+        /> */}
 
       </div>
     </>
