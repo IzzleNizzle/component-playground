@@ -13,7 +13,7 @@ import NavBizzle from './components/NavBizzle'
 export default function App() {
   return (
     <>
-      {/* <NavBizzle /> */}
+      <NavBizzle />
       <div className="App container">
         <SingleFrame>
           <ProgressBar />
