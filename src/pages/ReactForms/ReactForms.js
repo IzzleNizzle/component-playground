@@ -1,7 +1,7 @@
 import React from 'react'
 import SingleFrame from '../components/SingleFrame'
 
-export default function Forms() {
+export default function ReactForms() {
     return (
         <>
             <SingleFrame>
