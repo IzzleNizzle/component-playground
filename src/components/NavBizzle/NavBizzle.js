@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from "react-router-dom";
 import './index.css'
 
 export default function NavBizzle(props) {
@@ -6,14 +7,13 @@ export default function NavBizzle(props) {
     <nav>
       <div className="nav-left-container">
 
-        <a href='#'>IzzleNizzle</a>
+        <button href='#'>IzzleNizzle</button>
 
       </div>
 
       <div className="nav-right-container">
-        <a href='/reactform'>React.js Form Validation</a>
-        <a href='/progress'>Progress Bar</a>
-
+        <Link to={'/reactform'}>React.js Form Validation</Link>
+        <Link to={'/'}>Progress Bar</Link>
       </div>
     </nav>
   );
