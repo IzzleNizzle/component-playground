@@ -13,16 +13,10 @@ export default function ProgressApp() {
     let { name, value } = event.target;
     // Do not allow negative amounts
     if (value < 0 || value === "") {
-      console.log("true");
       return;
     } // else continue
     value = parseInt(value);
-    if (name === "goalAmount") {
-      return setGoalAmount(value)
-    }
-    else {
-      return setDoneAmount(value)
-    }
+    (name === "goalAmount") ? setGoalAmount(value) : setDoneAmount(value)
   }
 
   const resetAmountsProgressBar = () => {
