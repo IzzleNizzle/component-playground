@@ -7,7 +7,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import ProgressBarPage from './pages/ProgressBarPage'
 import ReactForms from './pages/ReactForms'
 import NavBizzle from './components/NavBizzle'
-// import NavBizzle from './components/NavBizzle'
+import FeedbackIzzle from './components/FeedbackIzzle'
 // import DraggableBox from './components/DraggableBox'
 
 
@@ -17,6 +17,7 @@ export default function App() {
     <>
       <Router basename={process.env.PUBLIC_URL}>
         <NavBizzle />
+        <FeedbackIzzle />
         <Switch>
           <Route exact path="/" component={ProgressBarPage} />
           <Route exact path="/reactform" component={ReactForms} />
